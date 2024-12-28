@@ -1,18 +1,26 @@
-'use client'
+'use client';
 
-import React, { useState } from 'react';
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import { Dog, Mail, Phone, MapPin, Send } from 'lucide-react';
 
-const ContactPage = () => {
-  const [formState, setFormState] = useState({
+interface FormState {
+  name: string;
+  email: string;
+  message: string;
+}
+
+const ContactPage: React.FC = () => {
+  const [formState, setFormState] = useState<FormState>({
     name: '',
     email: '',
     message: '',
   });
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState<boolean>(false);
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ): void => {
     const { name, value } = e.target;
     setFormState(prev => ({
       ...prev,
@@ -20,7 +28,7 @@ const ContactPage = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: FormEvent<HTMLFormElement>): void => {
     e.preventDefault();
     setIsSubmitted(true);
     setTimeout(() => {
@@ -37,9 +45,9 @@ const ContactPage = () => {
     <div className="min-h-screen bg-gradient-to-br from-pink-100 to-purple-100 py-12 px-4">
       <div className="max-w-5xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12 animate-bounce">
+        <div className="text-center mb-12">
           <Dog className="w-16 h-16 mx-auto text-purple-500 mb-4" />
-          <h1 className="text-4xl font-bold text-purple-600 mb-4">Woof! Let's Chat!</h1>
+          <h1 className="text-4xl font-bold text-purple-600 mb-4">Woof! Let&apos;s Chat!</h1>
           <p className="text-lg text-purple-500">
             Have questions about our pawsome services? Drop us a line!
           </p>
@@ -49,7 +57,7 @@ const ContactPage = () => {
           {/* Info Card */}
           <div className="bg-white rounded-xl p-8 shadow-lg transform hover:scale-105 transition-transform duration-300">
             <h2 className="text-2xl font-bold text-purple-600 mb-6 flex items-center">
-              <Dog className="w-6 h-6 mr-2 animate-bounce" />
+              <Dog className="w-6 h-6 mr-2" />
               Puppy Paradise Contact Info
             </h2>
             
@@ -72,7 +80,7 @@ const ContactPage = () => {
 
             <div className="mt-6 p-4 bg-purple-50 rounded-lg">
               <p className="text-sm text-purple-600">
-                We'll fetch your message and respond within 24 hours! 🐾
+                We&apos;ll fetch your message and respond within 24 hours! 🐾
               </p>
             </div>
           </div>
@@ -112,7 +120,7 @@ const ContactPage = () => {
                   value={formState.message}
                   onChange={handleInputChange}
                   placeholder="Your Message"
-                  rows="4"
+                  rows={4}
                   className="w-full px-4 py-2 rounded-lg border-2 border-purple-200 focus:border-purple-500 focus:outline-none transition-colors group-hover:border-pink-300"
                   required
                 />
@@ -129,7 +137,7 @@ const ContactPage = () => {
                 ) : (
                   <>
                     <span>Send Message</span>
-                    <Send className="w-5 h-5 animate-bounce" />
+                    <Send className="w-5 h-5" />
                   </>
                 )}
               </button>
