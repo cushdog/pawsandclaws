@@ -1,5 +1,5 @@
 import React from 'react';
-import { Dog, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Dog } from 'lucide-react';
 import {
   Carousel,
   CarouselContent,
@@ -75,7 +75,7 @@ const HomePage: React.FC = () => {
               Founded with a passion for pet care, we&apos;ve created a stress-free sanctuary where
               your pets can enjoy premium grooming services delivered by experienced professionals
               who treat each animal as their own. From basic trims to luxury spa treatments,
-              we're committed to enhancing your pet's well-being while ensuring they look and
+              we're committed to enhancing your pet&apos;s well-being while ensuring they look and
               feel their absolute best.
             </p>
             <p>
