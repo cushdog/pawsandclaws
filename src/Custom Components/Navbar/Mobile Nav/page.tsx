@@ -10,9 +10,9 @@ import {
   ChevronDown,
   Home,
   Scissors,
-  Calendar,
   MessageCircle,
   Menu,
+  User,
 } from "lucide-react";
 
 import {
@@ -59,7 +59,7 @@ const MobileNavbar = () => {
   const menuItems = [
     { href: "/", label: "Home", icon: Home },
     { href: "/services", label: "Services", icon: Scissors },
-    { href: "/booking", label: "Book Now", icon: Calendar },
+    { href: "/about", label: "About", icon: User },
     { href: "/contact", label: "Contact", icon: MessageCircle },
   ];
 
