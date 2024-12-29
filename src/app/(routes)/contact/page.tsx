@@ -108,23 +108,23 @@ const ContactPage: React.FC = () => {
           <div className="bg-white rounded-xl p-8 shadow-lg transform hover:scale-105 transition-transform duration-300">
             <h2 className="text-2xl font-bold text-purple-600 mb-6 flex items-center">
               <Dog className="w-6 h-6 mr-2" />
-              Puppy Paradise Contact Info
+              Paws and Claws Contact Info
             </h2>
             
             <div className="space-y-4">
               <div className="flex items-center space-x-3 group">
                 <Phone className="w-5 h-5 text-pink-500 group-hover:rotate-12 transition-transform" />
-                <span className="text-gray-700">(123) 456-7890</span>
+                <span className="text-gray-700"><a href='tel:8158481201'>(815) 848-1201</a></span>
               </div>
               
               <div className="flex items-center space-x-3 group">
                 <Mail className="w-5 h-5 text-pink-500 group-hover:rotate-12 transition-transform" />
-                <span className="text-gray-700">woof@puppyparadise.com</span>
+                <span className="text-gray-700"><a href='mailto:woof@puppyparadise.com'>woof@puppyparadise.com</a></span>
               </div>
               
               <div className="flex items-center space-x-3 group">
                 <MapPin className="w-5 h-5 text-pink-500 group-hover:rotate-12 transition-transform" />
-                <span className="text-gray-700">123 Puppy Lane, Dogtown</span>
+                <span className="text-gray-700"><a href='https://www.google.com/maps?q=512+N+Locust+St,+Pontiac,+IL+61764'>512 N Locust St, Pontiac, IL 61764</a></span>
               </div>
             </div>
 

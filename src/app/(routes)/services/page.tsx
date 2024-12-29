@@ -56,7 +56,7 @@ const ServicesPage: React.FC = () => {
     },
     {
       id: 3,
-      title: "Puppy's First Groom",
+      title: "Puppy&apos;s First Groom",
       description: "Gentle introduction to grooming for puppies",
       price: "From $45",
       icon: <Heart className="w-8 h-8" />,
@@ -85,12 +85,12 @@ const ServicesPage: React.FC = () => {
   ];
 
   const businessHours: BusinessHour[] = [
-    { day: "Monday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Tuesday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Wednesday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Thursday", hours: "9:00 AM - 7:00 PM" },
-    { day: "Friday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Saturday", hours: "10:00 AM - 4:00 PM" },
+    { day: "Monday", hours: "10:00 AM - 6:00 PM" },
+    { day: "Tuesday", hours: "10:00 AM - 6:00 PM" },
+    { day: "Wednesday", hours: "Closed" },
+    { day: "Thursday", hours: "10:00 AM - 6:00 PM" },
+    { day: "Friday", hours: "10:00 AM - 6:00 PM" },
+    { day: "Saturday", hours: "Closed" },
     { day: "Sunday", hours: "Closed" }
   ];
 

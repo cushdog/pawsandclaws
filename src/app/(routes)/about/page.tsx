@@ -34,7 +34,7 @@ const AboutPage: React.FC = () => {
             Meet Your Groomer
           </h1>
           <p className="text-lg text-purple-500">
-            The tail-wagging story behind Puppy Paradise
+            The tail-wagging story behind Paws and Claws
           </p>
         </div>
 
@@ -51,7 +51,7 @@ const AboutPage: React.FC = () => {
             </div>
             <h2 className="text-2xl font-bold text-purple-600 mb-4 flex items-center">
               <Heart className="w-6 h-6 mr-2 text-pink-500" />
-              Sarah Johnson
+              Keara Smith
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
               With over 15 years of experience in pet grooming, I&apos;ve turned my passion for pets into a
@@ -95,7 +95,7 @@ const AboutPage: React.FC = () => {
               />
               <TimelineItem 
                 year="2018"
-                title="Opened Puppy Paradise"
+                title="Opened Paws and Claws"
                 description="Dream became reality with our own salon"
               />
             </div>
@@ -176,7 +176,7 @@ const AboutPage: React.FC = () => {
             />
           </div>
           <p className="text-center text-gray-600 mt-4 italic">
-            Our amazing team at Puppy Paradise! 🐾
+            Our amazing team at Paws and Claws! 🐾
           </p>
         </div>
       </div>

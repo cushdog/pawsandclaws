@@ -12,11 +12,11 @@ export default function ContactInfo() {
         </div>
         <div className="flex items-center">
           <Phone className="w-6 h-6 mr-2 text-blue-600" />
-          <span>+1 (555) 123-4567</span>
+          <span><a href='tel:8158481201'>+1 (815) 848-1201</a></span>
         </div>
         <div className="flex items-center">
           <MapPin className="w-6 h-6 mr-2 text-blue-600" />
-          <span>123 Business St, City, State 12345</span>
+          <span><a href='https://www.google.com/maps?q=512+N+Locust+St,+Pontiac,+IL+61764'>512 N Locust St, Pontiac, IL 61764</a></span>
         </div>
       </div>
     </div>

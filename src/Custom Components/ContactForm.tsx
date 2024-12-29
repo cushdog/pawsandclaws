@@ -18,7 +18,7 @@ export default function ContactForm() {
     console.log({ name, email, message })
     toast({
       title: "Message Sent!",
-      description: "Thank you for your message. We'll get back to you soon.",
+      description: "Thank you for your message. We&apos;ll get back to you soon.",
     })
     setName('')
     setEmail('')

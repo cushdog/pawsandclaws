@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import NavbarController from "@/Custom Components/Navbar/page";
+import { CSPostHogProvider } from "./providers";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -26,13 +27,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <NavbarController />
-        {children}
-        <Analytics />
-      </body>
+      <CSPostHogProvider>
+        <body
+          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        >
+          <NavbarController />
+          {children}
+          <Analytics />
+        </body>
+      </CSPostHogProvider>
     </html>
   );
 }

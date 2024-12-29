@@ -43,12 +43,12 @@ const Navbar = () => {
 
   const businessHours: BusinessHour[] = [
     { day: "Sunday", hours: "Closed", isToday: false },
-    { day: "Monday", hours: "9:00 AM - 6:00 PM", isToday: false },
-    { day: "Tuesday", hours: "9:00 AM - 6:00 PM", isToday: false },
-    { day: "Wednesday", hours: "9:00 AM - 6:00 PM", isToday: false },
-    { day: "Thursday", hours: "9:00 AM - 7:00 PM", isToday: false },
-    { day: "Friday", hours: "9:00 AM - 6:00 PM", isToday: false },
-    { day: "Saturday", hours: "10:00 AM - 4:00 PM", isToday: false },
+    { day: "Monday", hours: "10:00 AM - 6:00 PM", isToday: false },
+    { day: "Tuesday", hours: "10:00 AM - 6:00 PM", isToday: false },
+    { day: "Wednesday", hours: "Closed", isToday: false },
+    { day: "Thursday", hours: "10:00 AM - 6:00 PM", isToday: false },
+    { day: "Friday", hours: "10:00 AM - 6:00 PM", isToday: false },
+    { day: "Saturday", hours: "Closed", isToday: false },
   ];
 
   const checkIfOpen = (hours: string): boolean => {
@@ -95,11 +95,11 @@ const Navbar = () => {
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2 whitespace-nowrap">
               <Phone className="w-4 h-4" />
-              <span>(123) 456-7890</span>
+              <span><a href='tel:8158481201'>(815) 848-1201</a></span>
             </div>
             <div className="flex items-center gap-2 whitespace-nowrap">
               <MapPin className="w-4 h-4" />
-              <span>123 Puppy Lane, Dogtown</span>
+              <span><a href='https://www.google.com/maps?q=512+N+Locust+St,+Pontiac,+IL+61764'>512 N Locust St, Pontiac, IL 61764</a></span>
             </div>
           </div>
 
@@ -143,7 +143,7 @@ const Navbar = () => {
             className="flex items-center space-x-2 text-purple-600 hover:text-pink-500 transition-colors"
           >
             <Dog className="w-8 h-8" />
-            <span className="text-2xl font-bold">Puppy Paradise</span>
+            <span className="text-2xl font-bold">Paws and Claws</span>
           </Link>
 
           <NavigationMenu>
