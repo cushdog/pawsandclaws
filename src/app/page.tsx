@@ -2,8 +2,6 @@
 
 import React from "react";
 import { Container, Typography, Box } from "@mui/material";
-import Navbar from "@/Custom Components/Navbar/Desktop Nav/page";
-import { BusinessHours } from "@/types/types";
 
 const HomePage = () => {
   return (

@@ -4,7 +4,6 @@ import {
   Heart,
   Award,
   GraduationCap,
-  Scissors,
   Users,
   Star,
   Coffee
@@ -55,7 +54,7 @@ const AboutPage: React.FC = () => {
               Sarah Johnson
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              With over 15 years of experience in pet grooming, I've turned my passion for pets into a
+              With over 15 years of experience in pet grooming, I&apos;ve turned my passion for pets into a
               dream career. My journey began with my first rescue dog, Max, who inspired me to create
               a safe and loving environment for all furry friends.
             </p>
