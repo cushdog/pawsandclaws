@@ -1,28 +1,22 @@
-import React from 'react';
-import { Container, Typography, Box } from '@mui/material';
+"use client";
+
+import React from "react";
+import { Container, Typography, Box } from "@mui/material";
+import Navbar from "@/Custom Components/Navbar/Desktop Nav/page";
+import { BusinessHours } from "@/types/types";
 
 const HomePage = () => {
   return (
-    <Container maxWidth="md">
-      <Box
-        display="flex"
-        justifyContent="center"
-        alignItems="center"
-        minHeight="100vh"
-        textAlign="center"
-        bgcolor="background.paper"
-        p={4}
-        boxShadow={3}
-        borderRadius={2}
-      >
-        <Typography variant="h2" component="h1" gutterBottom>
-          Welcome to My Homepage
+    <div>
+      <Container>
+        <Typography variant="h1" gutterBottom>
+          Home Page
         </Typography>
-        <Typography variant="h5" component="p">
-          This is a simple homepage with some fancy text display using Material-UI.
-        </Typography>
-      </Box>
-    </Container>
+        <Box my={2}>
+          <Typography variant="body1">This is the home page.</Typography>
+        </Box>
+      </Container>
+    </div>
   );
 };
 
