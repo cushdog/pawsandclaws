@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Dog,
   Scissors,
@@ -13,7 +13,7 @@ import {
   PawPrint,
   Bone,
   Ear,
-} from 'lucide-react';
+} from "lucide-react";
 
 interface Service {
   id: number;
@@ -30,13 +30,14 @@ interface BusinessHour {
 }
 
 const ServicesPage: React.FC = () => {
-  const [searchQuery, setSearchQuery] = useState('');
+  const [searchQuery, setSearchQuery] = useState("");
 
   const services: Service[] = [
     {
       id: 1,
       title: "Premium Bathing",
-      description: "insert description for premium bathing",
+      description:
+        "A tailored bathing experience designed for your pet's coat type and breed-specific needs.",
       price: "From $55",
       icon: <ShowerHead className="w-8 h-8" />,
       features: [
@@ -44,74 +45,70 @@ const ServicesPage: React.FC = () => {
         "Pre-brush to remove loose hair",
         "Specialized breed specific needs to ensure stress free environment",
         "Post blow dry and brush out",
-      ]
+      ],
     },
     {
       id: 2,
       title: "Hair Cut",
-      description: "insert description for hair cut",
+      description:
+        "Comprehensive coat trimming and styling for a refreshed look.",
       price: "From $55",
       icon: <Scissors className="w-8 h-8" />,
-      features: [
-        "Full bathing service",
-        "Full coat cut down",
-        "Full trim up",
-      ]
+      features: ["Full bathing service", "Full coat cut down", "Full trim up"],
     },
     {
       id: 3,
       title: "Teeth Brushing",
-      description: "insert description for teeth brushing",
+      description:
+        "Gentle cleaning to remove plaque and maintain oral hygiene.",
       price: "From $15",
       icon: <Sparkles className="w-8 h-8" />,
-      features: [
-        "Remove tartar and plaque above and below the gumline",
-      ]
+      features: ["Remove tartar and plaque above and below the gumline"],
     },
     {
       id: 4,
       title: "Dematting + Brushouts",
-      description: "insert description for dematting and brushouts",
+      description:
+        "Effective removal of mats and tangles for a smooth, healthy coat.",
       price: "From $20",
       icon: <PawPrint className="w-8 h-8" />,
       features: [
         "Removing mats of fur utilizing dematting tools and products",
         "Brushing out afterwards",
         "Brushing out old hair and dead skin",
-      ]
+      ],
     },
     {
       id: 5,
       title: "Nail Trimming + Grinding",
-      description: "insert description for nail trimming and grinding",
+      description: "Professional nail care to ensure safe and smooth edges.",
       price: "From $15",
       icon: <Bone className="w-8 h-8" />,
       features: [
         "Shortening nails by clipping them",
-        "Grinding nails to smoooth out any rough edges",
-      ]
+        "Grinding nails to smooth out any rough edges",
+      ],
     },
     {
       id: 6,
       title: "Ear Cleaning/Ear Hair Pulling",
-      description: "insert description for ear cleaning and ear hair pulling",
+      description: "Thorough ear cleaning and hair removal for better hygiene.",
       price: "From $15",
       icon: <Ear className="w-8 h-8" />,
       features: [
         "Carefully remove hair by using specific product to loosen hair and gently pull it out",
         "Clean out the wax buildup in the ear canal",
-      ]
+      ],
     },
     {
       id: 7,
       title: "Hair Trims",
-      description: "insert description for hair trims",
+      description:
+        "Precision trimming to tidy up around the face, feet, and featherings.",
       price: "From $55",
       icon: <Scissors className="w-8 h-8" />,
-      features: [
-        "Clean up around the face, feet, and other featherings",
-      ]
-    }
+      features: ["Clean up around the face, feet, and other featherings"],
+    },
   ];
 
   const businessHours: BusinessHour[] = [
@@ -121,13 +118,13 @@ const ServicesPage: React.FC = () => {
     { day: "Thursday", hours: "10:00 AM - 6:00 PM" },
     { day: "Friday", hours: "10:00 AM - 6:00 PM" },
     { day: "Saturday", hours: "Closed" },
-    { day: "Sunday", hours: "Closed" }
+    { day: "Sunday", hours: "Closed" },
   ];
 
-  const filteredServices = services.filter(service => {
+  const filteredServices = services.filter((service) => {
     const searchLower = searchQuery.toLowerCase();
     const titleMatch = service.title.toLowerCase().includes(searchLower);
-    const featureMatch = service.features.some(feature => 
+    const featureMatch = service.features.some((feature) =>
       feature.toLowerCase().includes(searchLower)
     );
     return titleMatch || featureMatch;
@@ -197,9 +194,11 @@ const ServicesPage: React.FC = () => {
         {/* No Results Message */}
         {filteredServices.length === 0 && (
           <div className="text-center py-8">
-            <p className="text-lg text-purple-500">No services found matching your search.</p>
-            <button 
-              onClick={() => setSearchQuery('')}
+            <p className="text-lg text-purple-500">
+              No services found matching your search.
+            </p>
+            <button
+              onClick={() => setSearchQuery("")}
               className="mt-4 px-6 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors"
             >
               Clear Search
@@ -215,7 +214,7 @@ const ServicesPage: React.FC = () => {
               Business Hours
             </h2>
           </div>
-          
+
           <div className="space-y-4">
             {businessHours.map((timeSlot, index) => (
               <div
@@ -224,9 +223,17 @@ const ServicesPage: React.FC = () => {
               >
                 <div className="flex items-center gap-3">
                   <Calendar className="w-5 h-5 text-pink-500 group-hover:rotate-12 transition-transform" />
-                  <span className="font-medium text-gray-700">{timeSlot.day}</span>
+                  <span className="font-medium text-gray-700">
+                    {timeSlot.day}
+                  </span>
                 </div>
-                <span className={`text-gray-600 ${timeSlot.hours === 'Closed' ? 'text-pink-500 font-medium' : ''}`}>
+                <span
+                  className={`text-gray-600 ${
+                    timeSlot.hours === "Closed"
+                      ? "text-pink-500 font-medium"
+                      : ""
+                  }`}
+                >
                   {timeSlot.hours}
                 </span>
               </div>
