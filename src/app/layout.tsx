@@ -5,16 +5,6 @@ import NavbarController from "@/Custom Components/Navbar/page";
 import { CSPostHogProvider } from "./providers";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 const mulish = Mulish({
   variable: "--font-mulish",
   subsets: ["latin"],

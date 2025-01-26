@@ -31,7 +31,7 @@ const HomePage: React.FC = () => {
           <img 
             src="/logo.png"
             alt="Paws n Claws Logo"
-            className="w-40 h-40 md:w-64 md:h-64 opacity-0 animate-fade-in object-contain"
+            className="w-96 h-96 md:w-64 md:h-64 opacity-0 animate-fade-in object-contain"
           />
         </div>
         
