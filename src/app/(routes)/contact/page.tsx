@@ -108,7 +108,7 @@ const ContactPage: React.FC = () => {
           <div className="bg-white rounded-xl p-8 shadow-lg transform hover:scale-105 transition-transform duration-300">
             <h2 className="text-2xl font-bold text-purple-600 mb-6 flex items-center">
               <Dog className="w-6 h-6 mr-2" />
-              Paws and Claws Contact Info
+              Paws & Claws Contact Info
             </h2>
             
             <div className="space-y-4">

@@ -45,8 +45,8 @@ const Navbar = () => {
   const businessHours: BusinessHour[] = [
     { day: "Sunday", hours: "Closed", isToday: false },
     { day: "Monday", hours: "10:00 AM - 6:00 PM", isToday: false },
-    { day: "Tuesday", hours: "10:00 AM - 6:00 PM", isToday: false },
-    { day: "Wednesday", hours: "Closed", isToday: false },
+    { day: "Tuesday", hours: "Closed", isToday: false },
+    { day: "Wednesday", hours: "10:00 AM - 6:00 PM", isToday: false },
     { day: "Thursday", hours: "10:00 AM - 6:00 PM", isToday: false },
     { day: "Friday", hours: "10:00 AM - 6:00 PM", isToday: false },
     { day: "Saturday", hours: "Closed", isToday: false },
@@ -158,7 +158,7 @@ const Navbar = () => {
             className="flex items-center space-x-2 text-purple-600 hover:text-pink-500 transition-colors"
           >
             <Dog className="w-8 h-8" />
-            <span className="text-2xl font-bold">Paws and Claws</span>
+            <span className="text-2xl font-bold">Paws & Claws</span>
           </Link>
 
           <NavigationMenu>

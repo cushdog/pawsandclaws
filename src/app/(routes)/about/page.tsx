@@ -17,8 +17,7 @@ const AboutPage: React.FC = () => {
   ];
 
   const funFacts = [
-    "Started grooming at age 16",
-    "Proud dog mom to 3 rescue pups",
+    "Proud dog mom to 1 rescue pups",
     "Volunteers at local shelters",
     "Favorite breed: Australian Shepherd",
   ];
@@ -33,7 +32,7 @@ const AboutPage: React.FC = () => {
             Meet Your Groomer
           </h1>
           <p className="text-lg text-purple-500">
-            The tail-wagging story behind Paws and Claws
+            The tail-wagging story behind Paws & Claws
           </p>
         </div>
 
@@ -95,7 +94,7 @@ const AboutPage: React.FC = () => {
               />
               <TimelineItem
                 year="2025"
-                title="Opened Paws and Claws"
+                title="Opened Paws & Claws"
                 description="Dream became reality with our own salon"
               />
             </div>
@@ -179,7 +178,7 @@ const AboutPage: React.FC = () => {
             />
           </div>
           <p className="text-center text-gray-600 mt-4 italic">
-            Our amazing team at Paws and Claws! 🐾
+            Our amazing team at Paws & Claws! 🐾
           </p>
         </div>
       </div>

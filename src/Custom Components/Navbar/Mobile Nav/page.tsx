@@ -50,8 +50,8 @@ const MobileNavbar = () => {
   const businessHours: BusinessHour[] = [
     { day: "Sunday", hours: "Closed", isToday: false },
     { day: "Monday", hours: "10:00 AM - 6:00 PM", isToday: false },
-    { day: "Tuesday", hours: "10:00 AM - 6:00 PM", isToday: false },
-    { day: "Wednesday", hours: "Closed", isToday: false },
+    { day: "Tuesday", hours: "Closed", isToday: false },
+    { day: "Wednesday", hours: "10:00 AM - 6:00 PM", isToday: false },
     { day: "Thursday", hours: "10:00 AM - 6:00 PM", isToday: false },
     { day: "Friday", hours: "10:00 AM - 6:00 PM", isToday: false },
     { day: "Saturday", hours: "Closed", isToday: false },
@@ -151,7 +151,7 @@ const MobileNavbar = () => {
             className="flex items-center space-x-2 text-purple-600 hover:text-pink-500 transition-colors"
           >
             <Dog className="w-8 h-8" />
-            <span className="text-xl font-bold">Paws and Claws</span>
+            <span className="text-xl font-bold">Paws & Claws</span>
           </Link>
 
           <Sheet>
@@ -169,7 +169,7 @@ const MobileNavbar = () => {
               <SheetHeader className="pb-4 border-b">
                 <SheetTitle className="flex items-center space-x-2 text-purple-600">
                   <Dog className="w-6 h-6" />
-                  <span>Paws and Claws</span>
+                  <span>Paws & Claws</span>
                 </SheetTitle>
               </SheetHeader>
 

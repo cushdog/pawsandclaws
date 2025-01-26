@@ -38,7 +38,7 @@ const ServicesPage: React.FC = () => {
       title: "Premium Bathing",
       description:
         "A tailored bathing experience designed for your pet's coat type and breed-specific needs.",
-      price: "From $55",
+      price: "From $65",
       icon: <ShowerHead className="w-8 h-8" />,
       features: [
         "Wide variety of shampoo and conditioners tailored to specific coat types",
@@ -52,7 +52,7 @@ const ServicesPage: React.FC = () => {
       title: "Hair Cut",
       description:
         "Comprehensive coat trimming and styling for a refreshed look.",
-      price: "From $55",
+      price: "From $65",
       icon: <Scissors className="w-8 h-8" />,
       features: ["Full bathing service", "Full coat cut down", "Full trim up"],
     },
@@ -70,7 +70,7 @@ const ServicesPage: React.FC = () => {
       title: "Dematting + Brushouts",
       description:
         "Effective removal of mats and tangles for a smooth, healthy coat.",
-      price: "From $20",
+      price: "From $10",
       icon: <PawPrint className="w-8 h-8" />,
       features: [
         "Removing mats of fur utilizing dematting tools and products",
@@ -105,7 +105,7 @@ const ServicesPage: React.FC = () => {
       title: "Hair Trims",
       description:
         "Precision trimming to tidy up around the face, feet, and featherings.",
-      price: "From $55",
+      price: "From $65",
       icon: <Scissors className="w-8 h-8" />,
       features: ["Clean up around the face, feet, and other featherings"],
     },
@@ -113,8 +113,8 @@ const ServicesPage: React.FC = () => {
 
   const businessHours: BusinessHour[] = [
     { day: "Monday", hours: "10:00 AM - 6:00 PM" },
-    { day: "Tuesday", hours: "10:00 AM - 6:00 PM" },
-    { day: "Wednesday", hours: "Closed" },
+    { day: "Tuesday", hours: "Closed" },
+    { day: "Wednesday", hours: "10:00 AM - 6:00 PM" },
     { day: "Thursday", hours: "10:00 AM - 6:00 PM" },
     { day: "Friday", hours: "10:00 AM - 6:00 PM" },
     { day: "Saturday", hours: "Closed" },
