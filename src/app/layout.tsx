@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Mulish } from "next/font/google";
+import { Mulish } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import NavbarController from "@/Custom Components/Navbar/page";
 import { CSPostHogProvider } from "./providers";
