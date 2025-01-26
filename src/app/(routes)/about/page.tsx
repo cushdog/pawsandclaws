@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import {
   Dog,
   Heart,
@@ -6,22 +6,21 @@ import {
   GraduationCap,
   Users,
   Star,
-  Coffee
-} from 'lucide-react';
+  Coffee,
+} from "lucide-react";
 
 const AboutPage: React.FC = () => {
   const certifications = [
-    "Professional Dog Grooming Certification",
-    "Pet First Aid & CPR",
-    "Animal Behavior Specialist",
-    "Specialized Breed Handling"
+    "2+ Years in the Pet Care Industry",
+    "Worked with Different Animals (Never Been Bit!)",
+    "QC Pet Studies Dog Grooming Course",
   ];
 
   const funFacts = [
     "Started grooming at age 16",
     "Proud dog mom to 3 rescue pups",
-    "Makes homemade dog treats",
-    "Volunteers at local shelters"
+    "Volunteers at local shelters",
+    "Favorite breed: Australian Shepherd",
   ];
 
   return (
@@ -54,9 +53,10 @@ const AboutPage: React.FC = () => {
               Keara Smith
             </h2>
             <p className="text-gray-600 leading-relaxed mb-4">
-              With over 15 years of experience in pet grooming, I&apos;ve turned my passion for pets into a
-              dream career. My journey began with my first rescue dog, Max, who inspired me to create
-              a safe and loving environment for all furry friends.
+              I&apos;ve been in the pet care industry for 3 years. While
+              I&apos;m just getting my feet into the world of pet grooming,
+              I&apos;m also very dedicated to getting to know you and your
+              pet&apos;s preferences and personalities.
             </p>
             <div className="flex flex-wrap gap-2 mt-4">
               {certifications.map((cert, index) => (
@@ -78,23 +78,23 @@ const AboutPage: React.FC = () => {
               My Journey
             </h2>
             <div className="space-y-6">
-              <TimelineItem 
-                year="2008"
-                title="Started Pet Grooming School"
-                description="Enrolled in the prestigious Pawfect Academy"
+              <TimelineItem
+                year="2022"
+                title="First Adoption"
+                description="Adopted my first rescue dog, Jax"
               />
-              <TimelineItem 
-                year="2010"
+              <TimelineItem
+                year="2023"
                 title="First Professional Role"
-                description="Lead groomer at Happy Tails Salon"
+                description="Started working at the Humane Society, and worked in animal control for 6 months"
               />
-              <TimelineItem 
-                year="2015"
-                title="Advanced Certification"
-                description="Completed master grooming certification"
+              <TimelineItem
+                year="2024"
+                title="Veterinarian Experience"
+                description="Started working at the Pontiac Vet in July"
               />
-              <TimelineItem 
-                year="2018"
+              <TimelineItem
+                year="2025"
                 title="Opened Paws and Claws"
                 description="Dream became reality with our own salon"
               />
@@ -110,11 +110,14 @@ const AboutPage: React.FC = () => {
               <div className="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Heart className="w-8 h-8 text-purple-500" />
               </div>
-              <h3 className="text-xl font-bold text-purple-600">My Philosophy</h3>
+              <h3 className="text-xl font-bold text-purple-600">
+                My Philosophy
+              </h3>
             </div>
             <p className="text-gray-600 text-center">
-              Every pet deserves to feel special. I believe in treating each furry friend as if they
-              were my own, providing comfort, care, and lots of love.
+              I believe in treating each furry friend as if they were my own,
+              providing comfort, care, and lots of love. After all, regular
+              grooming leads to happy and healthy pets!
             </p>
           </div>
 
@@ -127,8 +130,8 @@ const AboutPage: React.FC = () => {
               <h3 className="text-xl font-bold text-purple-600">Mission</h3>
             </div>
             <p className="text-gray-600 text-center">
-              To create a stress-free grooming experience where pets leave feeling refreshed,
-              happy, and looking their absolute best.
+              To create a stress-free grooming experience where pets leave
+              feeling refreshed, happy, and looking their absolute best.
             </p>
           </div>
 
@@ -141,8 +144,8 @@ const AboutPage: React.FC = () => {
               <h3 className="text-xl font-bold text-purple-600">Community</h3>
             </div>
             <p className="text-gray-600 text-center">
-              Proud to support local animal shelters and rescue organizations through regular
-              volunteer work and donation programs.
+              Passionate about working with local animal shelters and rescue
+              organizations, drawing on my firsthand experience in the field.
             </p>
           </div>
         </div>

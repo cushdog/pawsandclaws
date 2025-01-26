@@ -1,13 +1,18 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import {
   Dog,
   Scissors,
-  ShowerHead,
-  Heart,
   Clock,
-  Sparkles,
   Brush,
   Calendar,
+  Search,
+  ShowerHead,
+  Sparkles,
+  PawPrint,
+  Bone,
+  Ear,
 } from 'lucide-react';
 
 interface Service {
@@ -25,61 +30,86 @@ interface BusinessHour {
 }
 
 const ServicesPage: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+
   const services: Service[] = [
     {
       id: 1,
-      title: "Pawsome Premium Grooming",
-      description: "Complete grooming service including bath, haircut, nail trimming, and styling",
-      price: "From $65",
-      icon: <Scissors className="w-8 h-8" />,
+      title: "Premium Bathing",
+      description: "insert description for premium bathing",
+      price: "From $55",
+      icon: <ShowerHead className="w-8 h-8" />,
       features: [
-        "Breed-specific styling",
-        "Premium shampoo and conditioner",
-        "Ear cleaning",
-        "Nail trimming and filing",
-        "Bow or bandana included"
+        "Wide variety of shampoo and conditioners tailored to specific coat types",
+        "Pre-brush to remove loose hair",
+        "Specialized breed specific needs to ensure stress free environment",
+        "Post blow dry and brush out",
       ]
     },
     {
       id: 2,
-      title: "Spa Bath & Brush",
-      description: "Relaxing bath service with brushing and basic grooming",
-      price: "From $40",
-      icon: <ShowerHead className="w-8 h-8" />,
+      title: "Hair Cut",
+      description: "insert description for hair cut",
+      price: "From $55",
+      icon: <Scissors className="w-8 h-8" />,
       features: [
-        "Thorough brushing",
-        "Hydrating bath",
-        "Blow dry and brush out",
-        "Ear cleaning",
-        "Paw pad treatment"
+        "Full bathing service",
+        "Full coat cut down",
+        "Full trim up",
       ]
     },
     {
       id: 3,
-      title: "Puppy&apos;s First Groom",
-      description: "Gentle introduction to grooming for puppies",
-      price: "From $45",
-      icon: <Heart className="w-8 h-8" />,
+      title: "Teeth Brushing",
+      description: "insert description for teeth brushing",
+      price: "From $15",
+      icon: <Sparkles className="w-8 h-8" />,
       features: [
-        "Extra gentle handling",
-        "Positive reinforcement",
-        "Basic trimming",
-        "Training tips for home",
-        "Special puppy treat"
+        "Remove tartar and plaque above and below the gumline",
       ]
     },
     {
       id: 4,
-      title: "Luxury Fur Treatment",
-      description: "Premium fur treatment with special care for coat health",
-      price: "From $75",
-      icon: <Sparkles className="w-8 h-8" />,
+      title: "Dematting + Brushouts",
+      description: "insert description for dematting and brushouts",
+      price: "From $20",
+      icon: <PawPrint className="w-8 h-8" />,
       features: [
-        "Deep conditioning",
-        "De-shedding treatment",
-        "Skin therapy",
-        "Aromatherapy",
-        "Massage treatment"
+        "Removing mats of fur utilizing dematting tools and products",
+        "Brushing out afterwards",
+        "Brushing out old hair and dead skin",
+      ]
+    },
+    {
+      id: 5,
+      title: "Nail Trimming + Grinding",
+      description: "insert description for nail trimming and grinding",
+      price: "From $15",
+      icon: <Bone className="w-8 h-8" />,
+      features: [
+        "Shortening nails by clipping them",
+        "Grinding nails to smoooth out any rough edges",
+      ]
+    },
+    {
+      id: 6,
+      title: "Ear Cleaning/Ear Hair Pulling",
+      description: "insert description for ear cleaning and ear hair pulling",
+      price: "From $15",
+      icon: <Ear className="w-8 h-8" />,
+      features: [
+        "Carefully remove hair by using specific product to loosen hair and gently pull it out",
+        "Clean out the wax buildup in the ear canal",
+      ]
+    },
+    {
+      id: 7,
+      title: "Hair Trims",
+      description: "insert description for hair trims",
+      price: "From $55",
+      icon: <Scissors className="w-8 h-8" />,
+      features: [
+        "Clean up around the face, feet, and other featherings",
       ]
     }
   ];
@@ -94,6 +124,15 @@ const ServicesPage: React.FC = () => {
     { day: "Sunday", hours: "Closed" }
   ];
 
+  const filteredServices = services.filter(service => {
+    const searchLower = searchQuery.toLowerCase();
+    const titleMatch = service.title.toLowerCase().includes(searchLower);
+    const featureMatch = service.features.some(feature => 
+      feature.toLowerCase().includes(searchLower)
+    );
+    return titleMatch || featureMatch;
+  });
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-pink-100 to-purple-100 py-12 px-4">
       <div className="max-w-6xl mx-auto">
@@ -103,14 +142,28 @@ const ServicesPage: React.FC = () => {
           <h1 className="text-4xl font-bold text-purple-600 mb-4">
             Our Pawsome Services
           </h1>
-          <p className="text-lg text-purple-500">
+          <p className="text-lg text-purple-500 mb-8">
             Treat your furry friend to the ultimate grooming experience!
           </p>
+
+          {/* Search Bar */}
+          <div className="max-w-xl mx-auto relative">
+            <div className="relative">
+              <input
+                type="text"
+                placeholder="Search services or features..."
+                value={searchQuery}
+                onChange={(e) => setSearchQuery(e.target.value)}
+                className="w-full px-4 py-3 pl-12 rounded-xl border-2 border-purple-200 focus:border-purple-400 focus:outline-none focus:ring-2 focus:ring-purple-200 transition-all duration-300"
+              />
+              <Search className="w-6 h-6 text-purple-400 absolute left-3 top-1/2 transform -translate-y-1/2" />
+            </div>
+          </div>
         </div>
 
         {/* Services Grid */}
         <div className="grid md:grid-cols-2 gap-8 mb-16">
-          {services.map((service) => (
+          {filteredServices.map((service) => (
             <div
               key={service.id}
               className="bg-white rounded-xl p-6 shadow-lg transform hover:scale-105 transition-all duration-300 group"
@@ -140,6 +193,19 @@ const ServicesPage: React.FC = () => {
             </div>
           ))}
         </div>
+
+        {/* No Results Message */}
+        {filteredServices.length === 0 && (
+          <div className="text-center py-8">
+            <p className="text-lg text-purple-500">No services found matching your search.</p>
+            <button 
+              onClick={() => setSearchQuery('')}
+              className="mt-4 px-6 py-2 bg-purple-500 text-white rounded-lg hover:bg-purple-600 transition-colors"
+            >
+              Clear Search
+            </button>
+          </div>
+        )}
 
         {/* Business Hours */}
         <div className="bg-white rounded-xl p-8 shadow-lg max-w-2xl mx-auto">

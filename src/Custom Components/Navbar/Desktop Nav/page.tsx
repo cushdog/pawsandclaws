@@ -12,6 +12,7 @@ import {
   Scissors,
   User,
   MessageCircle,
+  Calendar,
 } from "lucide-react";
 
 import {
@@ -95,11 +96,17 @@ const Navbar = () => {
           <div className="flex items-center gap-8">
             <div className="flex items-center gap-2 whitespace-nowrap">
               <Phone className="w-4 h-4" />
-              <span><a href='tel:8158481201'>(815) 848-1201</a></span>
+              <span>
+                <a href="tel:8158481201">(815) 848-1201</a>
+              </span>
             </div>
             <div className="flex items-center gap-2 whitespace-nowrap">
               <MapPin className="w-4 h-4" />
-              <span><a href='https://www.google.com/maps?q=512+N+Locust+St,+Pontiac,+IL+61764'>512 N Locust St, Pontiac, IL 61764</a></span>
+              <span>
+                <a href="https://www.google.com/maps?q=512+N+Locust+St,+Pontiac,+IL+61764">
+                  512 N Locust St, Pontiac, IL 61764
+                </a>
+              </span>
             </div>
           </div>
 
@@ -108,7 +115,11 @@ const Navbar = () => {
               <button className="flex items-center space-x-2 hover:text-pink-200 transition-colors whitespace-nowrap">
                 <Clock className="w-4 h-4" />
                 <span>Today:</span>
-                <span className={isCurrentlyOpen ? "text-green-300" : "text-red-300"}>
+                <span
+                  className={
+                    isCurrentlyOpen ? "text-green-300" : "text-red-300"
+                  }
+                >
                   {todayHours}
                 </span>
                 <ChevronDown className="w-4 h-4" />
@@ -125,7 +136,11 @@ const Navbar = () => {
                   }`}
                 >
                   <span>{timeSlot.day}</span>
-                  <span className={timeSlot.hours === "Closed" ? "text-red-500" : ""}>
+                  <span
+                    className={
+                      timeSlot.hours === "Closed" ? "text-red-500" : ""
+                    }
+                  >
                     {timeSlot.hours}
                   </span>
                 </DropdownMenuItem>
@@ -151,10 +166,10 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   asChild
-                  className={navigationMenuTriggerStyle()}
+                  className={`${navigationMenuTriggerStyle()} text-purple-600 hover:text-pink-500 hover:bg-purple-50`}
                 >
                   <Link href="/" className="flex items-center gap-2 px-4 py-2">
-                    <Home className="w-4 h-4" />
+                    <Home className="w-4 h-4 text-purple-500" />
                     <span>Home</span>
                   </Link>
                 </NavigationMenuLink>
@@ -163,10 +178,13 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   asChild
-                  className={navigationMenuTriggerStyle()}
+                  className={`${navigationMenuTriggerStyle()} text-purple-600 hover:text-pink-500 hover:bg-purple-50`}
                 >
-                  <Link href="/services" className="flex items-center gap-2 px-4 py-2">
-                    <Scissors className="w-4 h-4" />
+                  <Link
+                    href="/services"
+                    className="flex items-center gap-2 px-4 py-2"
+                  >
+                    <Scissors className="w-4 h-4 text-purple-500" />
                     <span>Services</span>
                   </Link>
                 </NavigationMenuLink>
@@ -175,10 +193,13 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   asChild
-                  className={navigationMenuTriggerStyle()}
+                  className={`${navigationMenuTriggerStyle()} text-purple-600 hover:text-pink-500 hover:bg-purple-50`}
                 >
-                  <Link href="/about" className="flex items-center gap-2 px-4 py-2">
-                    <User className="w-4 h-4" />
+                  <Link
+                    href="/about"
+                    className="flex items-center gap-2 px-4 py-2"
+                  >
+                    <User className="w-4 h-4 text-purple-500" />
                     <span>About</span>
                   </Link>
                 </NavigationMenuLink>
@@ -187,14 +208,37 @@ const Navbar = () => {
               <NavigationMenuItem>
                 <NavigationMenuLink
                   asChild
-                  className={navigationMenuTriggerStyle()}
+                  className={`${navigationMenuTriggerStyle()} text-purple-600 hover:text-pink-500 hover:bg-purple-50`}
                 >
-                  <Link href="/contact" className="flex items-center gap-2 px-4 py-2">
-                    <MessageCircle className="w-4 h-4" />
+                  <Link
+                    href="/contact"
+                    className="flex items-center gap-2 px-4 py-2"
+                  >
+                    <MessageCircle className="w-4 h-4 text-purple-500" />
                     <span>Contact</span>
                   </Link>
                 </NavigationMenuLink>
               </NavigationMenuItem>
+
+
+
+              <NavigationMenuItem>
+                <NavigationMenuLink
+                  asChild
+                  className={`${navigationMenuTriggerStyle()} text-purple-600 hover:text-pink-500 hover:bg-purple-50`}
+                >
+                  <Link
+                    href="https://calendly.com/pawsnclawspontiac"
+                    className="flex items-center gap-2 px-4 py-2"
+                  >
+                    <Calendar className="w-4 h-4 text-purple-500" />
+                    <span>Booking</span>
+                  </Link>
+                </NavigationMenuLink>
+              </NavigationMenuItem>
+
+
+
             </NavigationMenuList>
           </NavigationMenu>
         </div>

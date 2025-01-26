@@ -28,7 +28,11 @@ const HomePage: React.FC = () => {
         </div>
         
         <div className="transform transition-transform hover:scale-105 duration-300 z-10">
-          <Dog className="w-32 h-32 md:w-48 md:h-48 text-purple-500 opacity-0 animate-fade-in" />
+          <img 
+            src="/logo.png"
+            alt="Paws n Claws Logo"
+            className="w-40 h-40 md:w-64 md:h-64 opacity-0 animate-fade-in object-contain"
+          />
         </div>
         
         <div className="absolute right-0 w-1/3 text-left pl-8">
@@ -63,26 +67,11 @@ const HomePage: React.FC = () => {
       <div className="max-w-4xl mx-auto px-4 pb-16">
         <div className="bg-white rounded-xl p-8 shadow-lg transform hover:scale-105 transition-all duration-300">
           <h2 className="text-3xl font-bold text-purple-600 mb-6 text-center">
-            Welcome to Puppy Paradise
+            Welcome to Paws n Claws
           </h2>
           <div className="prose prose-purple max-w-none text-gray-600 space-y-4">
             <p>
-              At Puppy Paradise, we believe every pet deserves to feel special. Our professional
-              grooming services are designed to provide your furry friends with the ultimate
-              pampering experience in a safe, loving environment.
-            </p>
-            <p>
-              Founded with a passion for pet care, we&apos;ve created a stress-free sanctuary where
-              your pets can enjoy premium grooming services delivered by experienced professionals
-              who treat each animal as their own. From basic trims to luxury spa treatments,
-              we&apos;re committed to enhancing your pet&apos;s well-being while ensuring they look and
-              feel their absolute best.
-            </p>
-            <p>
-              Our team combines years of experience with ongoing education in the latest grooming
-              techniques and pet care practices. We use only premium, pet-safe products and
-              provide individualized attention to each of our furry clients, ensuring their
-              unique needs are met with the utmost care and professionalism.
+              Paws n Claws offers premium pet grooming services for all types of pets. We guarantee your pet will receive a top of the line spa experience.
             </p>
           </div>
         </div>

@@ -119,7 +119,7 @@ const ContactPage: React.FC = () => {
               
               <div className="flex items-center space-x-3 group">
                 <Mail className="w-5 h-5 text-pink-500 group-hover:rotate-12 transition-transform" />
-                <span className="text-gray-700"><a href='mailto:woof@puppyparadise.com'>woof@puppyparadise.com</a></span>
+                <span className="text-gray-700"><a href='mailto:pawsnclawspontiac@gmail.com'>pawsnclawspontiac@gmail.com</a></span>
               </div>
               
               <div className="flex items-center space-x-3 group">

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Mulish } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import NavbarController from "@/Custom Components/Navbar/page";
 import { CSPostHogProvider } from "./providers";
@@ -12,6 +12,11 @@ const geistSans = Geist({
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
+
+const mulish = Mulish({
+  variable: "--font-mulish",
   subsets: ["latin"],
 });
 
@@ -29,7 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <CSPostHogProvider>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+          className={`${mulish.variable} antialiased`}
         >
           <NavbarController />
           {children}
