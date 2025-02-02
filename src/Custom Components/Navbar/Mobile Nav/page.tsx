@@ -62,7 +62,6 @@ const MobileNavbar = () => {
     { href: "/services", label: "Services", icon: Scissors },
     { href: "/about", label: "About", icon: User },
     { href: "/contact", label: "Contact", icon: MessageCircle },
-    { href: "https://calendly.com/pawsnclawspontiac", label: "Booking", icon: Calendar },    
   ];
 
   const checkIfOpen = (hours: string): boolean => {

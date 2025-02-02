@@ -220,25 +220,6 @@ const Navbar = () => {
                 </NavigationMenuLink>
               </NavigationMenuItem>
 
-
-
-              <NavigationMenuItem>
-                <NavigationMenuLink
-                  asChild
-                  className={`${navigationMenuTriggerStyle()} text-purple-600 hover:text-pink-500 hover:bg-purple-50`}
-                >
-                  <Link
-                    href="https://calendly.com/pawsnclawspontiac"
-                    className="flex items-center gap-2 px-4 py-2"
-                  >
-                    <Calendar className="w-4 h-4 text-purple-500" />
-                    <span>Booking</span>
-                  </Link>
-                </NavigationMenuLink>
-              </NavigationMenuItem>
-
-
-
             </NavigationMenuList>
           </NavigationMenu>
         </div>
